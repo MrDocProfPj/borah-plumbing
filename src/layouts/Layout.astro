@@ -1,0 +1,82 @@
+---
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Professional plumbing services for residential and commercial properties in South Dakota." />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+  :root {
+    --primary: #165786;
+    --primary-foreground: #ffffff;
+    --secondary: #f59e0b;
+    --secondary-foreground: #ffffff;
+    --accent: #f3f4f6;
+    --accent-foreground: #1f2937;
+    --background: #ffffff;
+    --foreground: #1f2937;
+    --destructive: #ef4444;
+    --ring: #165786;
+    --radius: 0.5rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  @keyframes moveUpHero {
+    from {
+      transform: translateY(100vh);
+    }
+    to {
+      transform: translateY(-100vh);
+    }
+  }
+
+  @keyframes moveDownHero {
+    from {
+      transform: translateY(-100vh);
+    }
+    to {
+      transform: translateY(100vh);
+    }
+  }
+
+  @keyframes moveUpTestimonial {
+    from {
+      transform: translateY(100vh);
+    }
+    to {
+      transform: translateY(-100vh);
+    }
+  }
+
+  @keyframes moveDownTestimonial {
+    from {
+      transform: translateY(-100vh);
+    }
+    to {
+      transform: translateY(100vh);
+    }
+  }
+</style> 
